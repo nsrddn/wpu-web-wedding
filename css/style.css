@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&family=Sacramento&display=swap");
+
+:root {
+	--pink: #f14e95;
+	--bg: #0a0a0a;
+	--shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	font-size: 1.2rem;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+#hero::before {
+	background-image: url(../img/wedding-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+#hero {
+	position: relative;
+	min-height: 100vh;
+}
+
+#hero h1,
+#hero h4,
+#hero p {
+	text-shadow: var(--shadow);
+}
+
+#hero h1 {
+	font-family: "Sacramento", cursive;
+	font-size: 6rem;
+	color: white;
+}
+
+#hero p {
+	font-size: 1.4rem;
+	color: white;
+}
+
+#hero h4 {
+	color: white;
+	font-size: 1.6rem;
+}
+
+#hero a {
+	color: var(--pink);
+	background-color: white;
+	box-shadow: var(--shadow);
+}
+
+#hero a:hover {
+	color: white;
+	background-color: var(--pink);
+}
+
+#mynavbar .navbar-brand,
+#offcanvasNavbarLabel {
+	font-family: "Sacramento", cursive;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#mynavbar {
+	background-color: rgba(255, 255, 255, 0.3) !important;
+	backdrop-filter: blur(10px);
+}
+
+#mynavbar .offcanvas {
+	height: 100vh;
+}
+
+#home h2,
+#info h2 {
+	color: var(--pink);
+	font-size: 5rem;
+	font-family: "Sacramento", cursive;
+	font-weight: bold;
+}
+
+#home h3 {
+	color: #444;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#home p {
+	color: #666;
+	font-size: 1.1rem;
+}
+
+#home {
+	background-image: url(../img/flora-pattern-3.png);
+	background-position: center;
+	background-size: cover;
+	min-height: 100vh;
+	margin-top: -60px;
+	padding-top: 8rem;
+	padding-bottom: 5rem;
+}
+
+#couple {
+	margin-top: 70px;
+}
+
+#couple img {
+	width: 100%;
+}
+
+#couple h3 {
+	font-family: "Sacramento", cursive;
+	font-size: 2.4rem;
+	color: var(--pink);
+}
+
+.love {
+	color: var(--pink);
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	display: flex;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) translateY(70px);
+}
+
+.love i {
+	margin: auto;
+}
+
+#info {
+	background-color: var(--bg);
+	color: white;
+	padding-top: 10rem;
+	padding-bottom: 8rem;
+}
+
+#info .alamat {
+	font-size: 1.1rem;
+}
+
+#info .description {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+#info .card {
+	background-color: rgba(255, 255, 255, 0.2) !important;
+	color: white !important;
+	border: 1px solid #999;
+}
+
+#info .card-header {
+	border-bottom: 1px solid #999;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+
+#info .card-body {
+	font-size: 1rem;
+}
+
+#info .card-footer {
+    font-size: .9rem;
+    border-top: 1px solid #999;
+    font-weight: 300;
+}
+
+/* Media Query */
+/* Extra Large */
+@media (max-width: 1200px) {
+	.love {
+		transform: translateX(-50%) translateY(45px);
+	}
+}
+
+/* Laptop */
+@media (max-width: 992px) {
+	html {
+		font-size: 75%;
+	}
+
+	.simply-countdown > .simply-section {
+		padding: 50%;
+		font-size: 1.8rem;
+	}
+
+	.love {
+		display: none;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	html {
+		font-size: 65%;
+	}
+
+	.simply-countdown > .simply-section {
+		padding: 40px;
+		font-size: 1.6rem;
+	}
+
+	.love {
+		display: none;
+	}
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+	html {
+		font-size: 40%;
+	}
+
+	.simply-countdown > .simply-section {
+		padding: 30px;
+		font-size: 1.5rem;
+	}
+
+	#mynavbar .navbar-brand,
+	#offcanvasNavbarLabel {
+		font-size: 20px;
+	}
+
+	#mynavbar .nav-link {
+		font-size: 10px;
+	}
+
+	.love {
+		display: none;
+	}
+}
