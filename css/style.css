@@ -239,4 +239,9 @@ body {
 	.love {
 		display: none;
 	}
+
+    #home {
+		margin-top: -40px;
+        padding-top: 20rem;
+    }
 }
