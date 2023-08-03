@@ -72,6 +72,7 @@ body {
 #mynavbar {
 	background-color: rgba(255, 255, 255, 0.3) !important;
 	backdrop-filter: blur(10px);
+	overflow: hidden;
 }
 
 #mynavbar .offcanvas {
@@ -100,6 +101,7 @@ body {
 #home {
 	background-image: url(../img/flora-pattern-3.png);
 	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 100vh;
 	margin-top: -60px;
@@ -243,5 +245,6 @@ body {
     #home {
 		margin-top: -40px;
         padding-top: 20rem;
+		overflow: hidden;
     }
 }

@@ -39,6 +39,7 @@
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">Wedding</a>
 				<button
+					id="hm-menu"
 					class="navbar-toggler border-0"
 					type="button"
 					data-bs-toggle="offcanvas"
@@ -57,6 +58,7 @@
 					<div class="offcanvas-header">
 						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wedding</h5>
 						<button
+							id="closeBtn"
 							type="button"
 							class="btn-close"
 							data-bs-dismiss="offcanvas"
@@ -213,6 +215,28 @@
 			crossorigin="anonymous"
 		></script>
 		<script>
+			const humMenu = document.querySelector("#hm-menu");
+			const btnClose = document.querySelector("#closeBtn");
+			const nav = document.querySelector("#mynavbar");
+
+			btnClose.addEventListener("click", function () {
+				setTimeout(() => {
+					nav.style.overflow = 'hidden';
+				}, 1000);
+			});
+
+			humMenu.addEventListener("click", function () {
+				nav.style.overflow = 'visible';
+			});
+
+			document.addEventListener('click', function(e) {
+				if(e.target.classList.contains('navbar-toggler-icon')) return false;
+				console.log(e.target)
+				setTimeout(() => {
+					nav.style.overflow = 'hidden';
+				}, 1000);				
+			})
+
 			simplyCountdown("#countdown", {
 				year: 2023, // required
 				month: 12, // required
