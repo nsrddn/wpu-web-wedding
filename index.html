@@ -209,33 +209,117 @@
 				</div>
 			</div>
 		</section>
+		<section id="story" class="story">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8 text-center col-10">
+						<span>Bagaimana Cinta Kami Bersemi</span>
+						<h2>Cerita Kami</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+							asperiores adipisci iusto molestias. Architecto, ex?
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<ul class="timeline">
+							<li>
+								<div
+									class="timeline-img"
+									style="
+										background-image: url(https://source.unsplash.com/300x300?wedding);
+									"
+								></div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3>Pertama Bertemu</h3>
+										<span>1 Juni 2011</span>
+									</div>
+									<div class="timeline-body">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Esse veritatis mollitia culpa debitis, molestias labore?
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted">
+								<div
+									class="timeline-img"
+									style="
+										background-image: url(https://picsum.photos/300/300?wedding);
+									"
+								></div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3>Mulai Serius</h3>
+										<span>13 April 2015</span>
+									</div>
+									<div class="timeline-body">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Debitis deserunt ad ratione explicabo architecto, libero cum
+										totam voluptatibus?
+									</div>
+								</div>
+							</li>
+							<li>
+								<div
+									class="timeline-img"
+									style="
+										background-image: url(https://picsum.photos/301/301?wedding);
+									"
+								></div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3>Tunangan</h3>
+										<span>12 January 2020</span>
+									</div>
+									<div class="timeline-body">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Esse veritatis mollitia culpa debitis, molestias labore?
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted">
+								<div
+									class="timeline-img"
+									style="
+										background-image: url(https://picsum.photos/300/300?wedding);
+									"
+								></div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3>Nikah</h3>
+										<span>14 Desember 2023</span>
+									</div>
+									<div class="timeline-body">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Debitis deserunt ad ratione explicabo architecto, libero cum
+										totam voluptatibus?
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 			crossorigin="anonymous"
 		></script>
 		<script>
-			const humMenu = document.querySelector("#hm-menu");
-			const btnClose = document.querySelector("#closeBtn");
 			const nav = document.querySelector("#mynavbar");
+			const myOffcanvas = document.getElementById("offcanvasNavbar");
 
-			btnClose.addEventListener("click", function () {
-				setTimeout(() => {
-					nav.style.overflow = 'hidden';
-				}, 1000);
+			myOffcanvas.addEventListener("hidden.bs.offcanvas", (event) => {
+				nav.style.overflow = "hidden";
 			});
 
-			humMenu.addEventListener("click", function () {
-				nav.style.overflow = 'visible';
+			myOffcanvas.addEventListener("show.bs.offcanvas", (event) => {
+				nav.style.overflow = "visible";
 			});
-
-			document.addEventListener('click', function(e) {
-				if(e.target.classList.contains('navbar-toggler-icon')) return false;
-				console.log(e.target)
-				setTimeout(() => {
-					nav.style.overflow = 'hidden';
-				}, 1000);				
-			})
 
 			simplyCountdown("#countdown", {
 				year: 2023, // required
