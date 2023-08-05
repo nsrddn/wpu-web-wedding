@@ -174,9 +174,9 @@ body {
 }
 
 #info .card-footer {
-    font-size: .9rem;
-    border-top: 1px solid #999;
-    font-weight: 300;
+	font-size: 0.9rem;
+	border-top: 1px solid #999;
+	font-weight: 300;
 }
 
 #story {
@@ -186,7 +186,7 @@ body {
 #story span {
 	text-transform: uppercase;
 	color: #666;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	letter-spacing: 1px;
 	margin-bottom: 1rem;
 	display: block;
@@ -206,7 +206,7 @@ body {
 
 .timeline::before {
 	left: 50%;
-	content: '';
+	content: "";
 	top: 0;
 	bottom: 0;
 	background-color: #ccc;
@@ -219,8 +219,9 @@ body {
 	position: relative;
 }
 
-.timeline li::before, .timeline li::after {
-	content: '';
+.timeline li::before,
+.timeline li::after {
+	content: "";
 	display: table;
 }
 
@@ -255,7 +256,7 @@ body {
 }
 
 .timeline li.timeline-inverted .timeline-panel::before {
-	content: '';
+	content: "";
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -271,7 +272,7 @@ body {
 }
 
 .timeline li .timeline-panel::before {
-	content: '';
+	content: "";
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -307,6 +308,22 @@ body {
 		display: none;
 	}
 
+	.timeline li .timeline-img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.timeline li .timeline-panel {
+		padding: 1rem;
+	}
+
+	.timeline li .timeline-panel::before {
+		top: 25%;
+	}
+
+	.timeline li.timeline-inverted .timeline-panel::before {
+		top: 22%;
+	}
 }
 
 /* Tablet */
@@ -322,6 +339,29 @@ body {
 
 	.love {
 		display: none;
+	}
+
+	.timeline::before {
+		left: 30%;
+	}
+
+	.timeline li .timeline-img {
+		left: 30%;
+	}
+
+	.timeline li .timeline-panel {
+		float: right;
+		left: -17%;
+	}
+
+	.timeline li .timeline-panel::before {
+		width: 15px;
+		height: 15px;
+		left: -3.8%;
+		border-top: none;
+		border-right: none;
+		border-bottom: 1px solid #ccc;
+		border-left: 1px solid #ccc;
 	}
 }
 
@@ -349,9 +389,35 @@ body {
 		display: none;
 	}
 
-    #home {
+	#home {
 		margin-top: -40px;
-        padding-top: 20rem;
+		padding-top: 20rem;
 		overflow: hidden;
-    }
+	}
+
+	.timeline li .timeline-panel {
+		left: -15%
+	}
+
+	.timeline li .timeline-img {
+		width: 80px;
+		height: 80px;
+	}
+
+	.timeline li .timeline-panel {
+		padding: .5rem;
+	}
+
+	.timeline li .timeline-panel::before {
+		width: 10px;
+		height: 10px;
+		top: 33%;
+	}
+
+	.timeline li.timeline-inverted .timeline-panel::before {
+		width: 10px;
+		height: 10px;
+		left: -4.1%;
+		top: 30%;
+	}
 }
